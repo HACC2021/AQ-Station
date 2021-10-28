@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/ics-software-engineering/meteor-application-template-react/master/doc/landing-page.png)
 
-Meteor-application-template-react is a sample Meteor 2.0 application that illustrates:
+Meteor-application-template-react is a sample Meteor 2.4 application that illustrates:
 
   * A standard directory layout using 'imports/' as recommended in the [Meteor Guide](https://guide.meteor.com/structure.html)
   * [Semantic UI React](https://react.semantic-ui.com/) for user interface.
@@ -70,7 +70,7 @@ I20180227-13:33:02.744(-10)?   Adding: Boogie Board (admin@foo.com)
 
 ### Note regarding "bcrypt warning":
 
-You will also get the following message when you run this application:
+You might also get the following message when you run this application:
 
 ```
 Note: you are using a pure-JavaScript implementation of bcrypt.
