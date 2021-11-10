@@ -1,18 +1,29 @@
 import React from 'react';
+import { Container, Grid, Image, Header } from 'semantic-ui-react';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class Footer extends React.Component {
   render() {
-    const divStyle = { paddingTop: '15px' };
     return (
-      <footer>
-        <div style={divStyle} className="ui center aligned container">
-          <hr />
-              Department of Information and Computer Sciences <br />
-              University of Hawaii<br />
-              Honolulu, HI 96822 <br />
-          <a href="http://ics-software-engineering.github.io/meteor-application-template-react">Template Home Page</a>
-        </div>
+      <footer className="footer-style">
+        <Container>
+          <Grid borderless columns={2}>
+            <Grid.Row>
+              <Grid.Column width ={4}>
+                <Image src = 'images/pet-navbar.gif' size = 'large'/>
+              </Grid.Column>
+              <Grid.Column>
+                <div className = 'footer-link'>
+                  <Header inverted as = 'h2'>Contact us </Header>
+                  <hr/>
+                  <a className = 'footer-link' href="https://hdoa.hawaii.gov/ai/aqs/aqs-info/"> Website : Animal Industry Division </a> <br/>
+                    phone : (808) 973-9560  <br/>
+                    e-mail: hdoa.info@hawaii.gov
+                </div>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
       </footer>
     );
   }

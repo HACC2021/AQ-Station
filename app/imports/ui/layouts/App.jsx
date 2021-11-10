@@ -7,14 +7,20 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
-import ListStuff from '../pages/ListStuff';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
-import AddStuff from '../pages/AddStuff';
-import EditStuff from '../pages/EditStuff';
+import AddPets from '../pages/AddPets';
+import ListAnnouncements from '../pages/ListAnnouncements';
+import UserPage from '../pages/UserPage';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
+import PetReadyMessage from '../pages/PetReadyMessage';
+import PetForm from '../pages/PetForm';
+import PetEditForm from '../pages/PetEditForm';
+import PetRoster from '../pages/PetRoster';
+import Queue from '../pages/Queue';
+import ListPets from '../pages/ListPets';
+import ListWaitlist from '../pages/ListWaitlist';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -28,10 +34,16 @@ class App extends React.Component {
             <Route path="/signin" component={Signin}/>
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
-            <ProtectedRoute path="/list" component={ListStuff}/>
-            <ProtectedRoute path="/add" component={AddStuff}/>
-            <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
-            <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+            <Route path="/petstatus" component={PetReadyMessage}/>
+            <ProtectedRoute path="/queue" component={Queue}/>
+            <ProtectedRoute path="/user" component={UserPage}/>
+            <ProtectedRoute path="/petform" component={PetForm}/>
+            <ProtectedRoute path="/petroster" component={PetRoster}/>
+            <Route path="/listannouncements" component={ListAnnouncements}/>
+            <AdminProtectedRoute path="/addpet" component={AddPets}/>
+            <AdminProtectedRoute path="/petlist" component={ListPets}/>
+            <AdminProtectedRoute path="/waitlist" component={ListWaitlist}/>
+            <AdminProtectedRoute path="/pet/edit/:_id" component={PetEditForm}/>
             <Route component={NotFound}/>
           </Switch>
           <Footer/>

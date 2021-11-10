@@ -3,24 +3,21 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
 /**
- * The StuffsCollection. It encapsulates state and variable values for stuff.
+ * The AdoptsCollection. It encapsulates state and variable values for Adopt.
  */
-class StuffsCollection {
+class PetsCollection {
   constructor() {
     // The name of this collection.
-    this.name = 'StuffsCollection';
+    this.name = 'PetsCollection';
     // Define the Mongo collection.
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
-      name: String,
-      quantity: Number,
-      owner: String,
-      condition: {
-        type: String,
-        allowedValues: ['excellent', 'good', 'fair', 'poor'],
-        defaultValue: 'good',
-      },
+      firstName: String,
+      lastName: String,
+      email: String,
+      phoneNumber: String,
+      microchipCode: String,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
@@ -31,7 +28,7 @@ class StuffsCollection {
 }
 
 /**
- * The singleton instance of the StuffsCollection.
- * @type {StuffsCollection}
+ * The singleton instance of the AdoptsCollection.
+ * @type {PetsCollection}
  */
-export const Stuffs = new StuffsCollection();
+export const Pets = new PetsCollection();

@@ -1,0 +1,69 @@
+.center-confirmation {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/*navbar-color{
+
+}*/
+.footer-style {
+  background-color: #03669e;
+  background-size: cover;
+  height: 500px;
+}
+.footer-link{
+  color: white;
+}
+.overall-background{
+  background-color: #03669e;
+}
+.overall-background2{
+  background-color: #03669e;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.navbar-style{
+  height: 80px;
+}
+.center-text {
+  padding-top: 1rem;
+}
+.alreadyChecked {
+    padding: 500rem;
+}
+.confirm-message {
+  margin-top: 2rem;
+}
+.ready-style{
+  padding-top: 30px !important;
+}
+
+.notReady-background{
+  background: url("images/newpet.png") no-repeat;
+  background-size: 100%;
+  height: 500px;
+}
+
+@media (max-width: 480px) {
+  .notReady-background {
+    background: url("images/newpet-mobile.png") no-repeat;
+    background-size: 100%;
+  }
+}
+
+
+.notReady2-background{
+    background-color: #4d9dd9;
+    background-size: 100%;
+    height: 300px;
+}
+@media (max-width: 480px) {
+  .notReady2-background {
+    background-color: #4d9dd9;
+    background-size: 100%;
+  }
+}
+
+.listWaitlistTable {
+  padding-bottom: 5rem;
+}
